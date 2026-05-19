@@ -1,32 +1,22 @@
 {
   "name": "ceylontrails",
-  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@react-google-maps/api": "^2.20.3",
-    "firebase": "^10.13.2",
-    "framer-motion": "^11.5.4",
-    "lucide-react": "^0.445.0",
-    "next": "14.2.13",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-hot-toast": "^2.4.1"
+    "build": "turbo run build",
+    "dev": "turbo run dev --filter=web --filter=admin",
+    "dev:mobile": "pnpm --filter mobile dev",
+    "dev:all": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types"
   },
   "devDependencies": {
-    "@types/node": "^22.7.4",
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.0",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^8.57.1",
-    "eslint-config-next": "14.2.13",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.13",
-    "typescript": "^5.6.2"
+    "prettier": "^3.7.4",
+    "turbo": "^2.9.14",
+    "typescript": "5.9.2"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
   }
 }
